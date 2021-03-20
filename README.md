@@ -20,8 +20,7 @@ Martian 框架的官方网关组件
 </div>
 
 ## 项目简介
-
-可以跟Martian-cloud 配合一起使用，实现请求的统一转发以及负载均衡
+Martian-gateway 是Martian的官方 网关组件，可以跟Martian-cloud 配合一起使用，实现请求的统一转发以及负载均衡
 
 ## 官方资源
 
