@@ -23,6 +23,7 @@ Martian 框架的官方网关组件
 
 可以跟Martian-cloud 配合一起使用，实现请求的统一转发以及负载均衡
 
-## 文档
+## 官方资源
 
-[Martian-gateway文档](http://mars-framework.com/doc.html?tag=compent)
+- Martian官网: [http://mars-framework.com/](http://mars-framework.com/)
+- Martian-gateway文档: [http://mars-framework.com/doc.html?tag=compent](http://mars-framework.com/doc.html?tag=compent)
