@@ -1,9 +1,9 @@
 package com.mars.gateway.api;
 
-import com.alibaba.fastjson.JSON;
 import com.mars.cloud.constant.MarsCloudConstant;
 import com.mars.cloud.model.HttpResultModel;
 import com.mars.cloud.util.SerializableCloudUtil;
+import com.mars.common.util.JSONUtil;
 import com.mars.gateway.api.filter.GateFactory;
 import com.mars.gateway.common.filter.GateFilter;
 import com.mars.gateway.api.model.RequestInfoModel;
@@ -42,7 +42,7 @@ public class GateWayDispatcher implements MarsServerHandler {
             /* 执行过滤器 */
             Object result = execFilter(gateFilterList, request, response);
             if(result != null && !result.toString().equals(GateFilter.SUCCESS)){
-                response.send(JSON.toJSONString(result));
+                response.send(JSONUtil.toJSONString(result));
                 return;
             }
 
@@ -78,13 +78,13 @@ public class GateWayDispatcher implements MarsServerHandler {
         /* 执行过滤器的 响应方法 */
         Object filterResult = execFilterResult(gateFilterList, request, response, resultData, resultStream);
         if(filterResult != null && !filterResult.toString().equals(GateFilter.SUCCESS)){
-            response.send(JSON.toJSONString(filterResult));
+            response.send(JSONUtil.toJSONString(filterResult));
             return;
         }
 
         /* 响应给客户端 */
         if(fileName.equals(MarsCloudConstant.RESULT_FILE_NAME)){
-            response.send(JSON.toJSONString(resultData));
+            response.send(JSONUtil.toJSONString(resultData));
         } else {
             response.downLoad(fileName, resultStream);
         }

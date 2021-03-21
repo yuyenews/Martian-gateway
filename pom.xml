@@ -7,7 +7,7 @@
     <groupId>com.github.yuyenews</groupId>
     <artifactId>Martian-gateway</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.8</version>
+    <version>1.1.9</version>
     <modules>
         <module>mars-gateway-core</module>
         <module>mars-gateway-server</module>
@@ -33,12 +33,12 @@
         <dependency>
             <groupId>com.github.yuyenews</groupId>
             <artifactId>mars-server</artifactId>
-            <version>3.2.17</version>
+            <version>3.2.18</version>
         </dependency>
         <dependency>
             <groupId>com.github.yuyenews</groupId>
             <artifactId>mars-cloud-starter</artifactId>
-            <version>4.0.6</version>
+            <version>4.0.7</version>
         </dependency>
 
         <dependency>

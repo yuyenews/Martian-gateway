@@ -1,7 +1,7 @@
 package com.mars.gateway.request.param;
 
-import com.alibaba.fastjson.JSONObject;
 import com.mars.cloud.annotation.enums.ContentType;
+import com.mars.common.util.JSONUtil;
 import com.mars.gateway.request.util.RequestUtil;
 import com.mars.iserver.par.factory.InitRequestFactory;
 import com.mars.server.server.request.HttpMarsRequest;
@@ -43,15 +43,11 @@ public class ParamConversionToModel {
      * @return
      */
     private static Map<String, Object> getJSON(HttpMarsRequest request){
-        JSONObject jsonObject = request.getJsonParam();
+        String jsonObject = request.getJsonParam();
         if(jsonObject == null){
             return null;
         }
-        Map<String,Object> params = new HashMap<>();
-        for(String key : jsonObject.keySet()){
-            params.put(key, jsonObject.get(key));
-        }
-        return params;
+        return JSONUtil.toMap(jsonObject);
     }
 
     /**

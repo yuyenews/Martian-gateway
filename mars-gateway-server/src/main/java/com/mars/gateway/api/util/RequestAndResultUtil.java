@@ -44,6 +44,6 @@ public class RequestAndResultUtil {
      * @param context 消息
      */
     public static void send(HttpMarsResponse response, String context) {
-        response.send(MesUtil.getMes(500,context).toJSONString());
+        response.send(MesUtil.getMes(500,context));
     }
 }
