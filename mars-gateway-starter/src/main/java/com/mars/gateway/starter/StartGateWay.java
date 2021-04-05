@@ -32,7 +32,6 @@ public class StartGateWay {
 
             // 启动定时任务
             GateTimer.doNotice();
-            GateTimer.clearApi();
 
             // 开启HTTP服务
             GateServer.startServer(marsGateWayConfig.port());

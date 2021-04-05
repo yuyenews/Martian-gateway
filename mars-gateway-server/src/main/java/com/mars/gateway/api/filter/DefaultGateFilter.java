@@ -4,7 +4,7 @@ import com.mars.common.constant.MarsConstant;
 import com.mars.gateway.api.util.DispatcherUtil;
 import com.mars.gateway.common.filter.GateFilter;
 import com.mars.gateway.core.constant.GateWayConstant;
-import com.mars.iserver.execute.access.PathAccess;
+import com.mars.aio.execute.access.PathAccess;
 import com.mars.server.server.request.HttpMarsRequest;
 import com.mars.server.server.request.HttpMarsResponse;
 
