@@ -1,6 +1,5 @@
 package com.mars.gateway.core.timer;
 
-import com.mars.cloud.core.cache.ServerApiCacheManager;
 import com.mars.gateway.core.notice.GateNotice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
